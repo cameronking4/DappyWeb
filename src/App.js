@@ -229,6 +229,7 @@ class App extends React.Component {
                 {thisUser.lastName ? thisUser.lastName : ""}
               </h2>
               <h3> {thisUser.userName ? thisUser.userName : ""}</h3>
+              <h3> {thisUser.phone ? thisUser.phone : ""}</h3>
             </div>
           </div>
         </div>
@@ -264,8 +265,8 @@ class App extends React.Component {
                         width: "80%",
                         paddingTop: "10px",
                         paddingBottom: "10px",
-                        backgroundColor: "white",
-                        color: "black",
+                        backgroundColor: "black",
+                        color: "white",
                         fontWeight: 700,
                       }}
                       id="TooltipExample"
@@ -278,7 +279,6 @@ class App extends React.Component {
                 
                 {thisUser.instagram &&
                 <div style={{ paddingBottom: "30px" }}>
-                    <FontAwesomeIcon icon={["fab", "github"]} />
                   <a
                     href={'http://instagram.com/'+ thisUser.instagram}
                     className="btn btn-outline-light"
@@ -319,7 +319,7 @@ class App extends React.Component {
                 {thisUser.snapchat &&
                 <div style={{ paddingBottom: "30px" }}>
                    <a
-                    href={'http://facebook.com/'+ thisUser.snapchat}
+                    href={'http://snapchat.com/add/'+ thisUser.snapchat}
                     className="btn btn-outline-light"
                     style={{
                       width: "80%",
@@ -334,25 +334,6 @@ class App extends React.Component {
                     {thisUser.snapchat ? thisUser.snapchat : null}
                   </a>
                 </div> } 
-
-            {thisUser.linkedin &&
-                <div style={{ paddingBottom: "30px" }}>
-                  <a
-                    href={'http://facebook.com/'+ thisUser.linkedin}
-                    className="btn btn-outline-light"
-                    style={{
-                      width: "80%",
-                      paddingTop: "10px",
-                      paddingBottom: "10px",
-                      fontWeight: 600, 
-                      backgroundColor: "transparent",
-                      color: "white"
-                    }}
-                  >
-                      <FontAwesomeIcon icon={faLinkedin} size="1x" /> LinkedIn: 
-                    {thisUser.linkedin ? thisUser.linkedin : null}
-                  </a>
-                </div>}
 
             {thisUser.twitter &&
                 <div style={{ paddingBottom: "30px" }}>
@@ -373,10 +354,49 @@ class App extends React.Component {
                   </a>
                 </div>}
 
+            {thisUser.linkedin &&
+                <div style={{ paddingBottom: "30px" }}>
+                  <a
+                    href={'http://linkedin.com/in/'+ thisUser.linkedin}
+                    className="btn btn-outline-light"
+                    style={{
+                      width: "80%",
+                      paddingTop: "10px",
+                      paddingBottom: "10px",
+                      fontWeight: 600, 
+                      backgroundColor: "transparent",
+                      color: "white"
+                    }}
+                  >
+                      <FontAwesomeIcon icon={faLinkedin} size="1x" /> LinkedIn: 
+                    {thisUser.linkedin ? thisUser.linkedin : null}
+                  </a>
+                </div>}
+        
+            {thisUser.tiktok &&
+                <div style={{ paddingBottom: "30px" }}>
+                   <a
+                    href={'http://tiktok.com/@'+ thisUser.tiktok}
+                    className="btn btn-outline-light"
+                    style={{
+                      width: "80%",
+                      paddingTop: "10px",
+                      paddingBottom: "10px",
+                      fontWeight: 600, 
+                      backgroundColor: "transparent",
+                      color: "white"
+                    }}
+                  >
+                     <FontAwesomeIcon icon={faTiktok} size="1x" /> TikTok:  
+                    {thisUser.tiktok ? thisUser.tiktok : null}
+                  </a>
+                </div> }
+       
+
             {thisUser.venmo &&
                 <div style={{ paddingBottom: "30px" }}>
                    <a
-                    href={'http://facebook.com/'+ thisUser.venmo}
+                    href={'http://venmo.com/'+ thisUser.venmo}
                     className="btn btn-outline-light"
                     style={{
                       width: "80%",
@@ -396,7 +416,7 @@ class App extends React.Component {
                 <div style={{ paddingBottom: "30px" }}>
                     <FontAwesomeIcon icon={["fab", "github"]} />
                    <a
-                    href={'http://facebook.com/'+ thisUser.cashapp}
+                    href={'https://cash.app/$'+ thisUser.cashapp}
                     className="btn btn-outline-light"
                     style={{
                       width: "80%",
@@ -412,29 +432,12 @@ class App extends React.Component {
                   </a>
                 </div> }
 
-            {thisUser.tiktok &&
-                <div style={{ paddingBottom: "30px" }}>
-                   <a
-                    href={'http://facebook.com/'+ thisUser.tiktok}
-                    className="btn btn-outline-light"
-                    style={{
-                      width: "80%",
-                      paddingTop: "10px",
-                      paddingBottom: "10px",
-                      fontWeight: 600, 
-                      backgroundColor: "transparent",
-                      color: "white"
-                    }}
-                  >
-                     <FontAwesomeIcon icon={faTiktok} size="1x" /> TikTok:  
-                    {thisUser.tiktok ? thisUser.tiktok : null}
-                  </a>
-                </div> }
+           
                 
             {thisUser.website &&
                 <div style={{ paddingBottom: "30px" }}>
                    <a
-                    href={thisUser.website}
+                    href={"http://" + thisUser.website}
                     className="btn btn-outline-light"
                     style={{
                       width: "80%",
@@ -475,7 +478,7 @@ class App extends React.Component {
                       color: "black"
                     }}
                   >
-                    Download the Dappy app!
+                    Download App Now!
                   </button>
                 </div>
               </div>
